@@ -38,3 +38,12 @@
 
 
 ## 如何打造一套公共的project 模版包括Base库、build.gradle 相同的配置，在插件化过程中，使各个插件配置相同 todo
+
+
+##插件化梳理 https://blog.csdn.net/zengfenliang/article/details/97616251
+
+
+## 不同组件之间如何公用同一个View、Fragment
+
+## RePlugin 和 阿里的Atlas 的优缺点
+
