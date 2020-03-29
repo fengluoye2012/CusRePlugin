@@ -1,0 +1,40 @@
+# 主要目的
+
+  通过对360开源的插件化框架RePlugin的使用和学习，更加深入理解具体实现原理，该项目重新实现RePlugin的业务逻辑。
+
+
+# 主要问题与思考
+
+    ## 插件化和组件化的区别
+       插件化可以动态加载、更新插件，组件化不能
+
+    ##、插件化和热更新的区别
+        热更新的dex包较小，能够更新的内容有限，部分情况不适用，部分机型无法成功
+
+    ## 插件化的意义、为什么使用插件化
+
+
+
+
+    ##、为什么要单独提取出fragment的jar包，如果引用的support版本不同，会有影响吗？提取出来之后 添加了什么处理呢？
+
+    ##、插件和宿主之间的关系、
+
+
+    ##、插件和宿主/插件如何进行数据交互，如1）、插件需要读取宿主中的信息；2）、宿主需要调用方法，获取返回值等情况
+        如何让宿主使用登录插件的功能：https://github.com/Qihoo360/RePlugin/issues/785
+        EventBus 通信：https://github.com/Qihoo360/RePlugin/issues/736
+        宿主要调用插件的方法，插件也要调用宿主的方法，怎么解决：https://github.com/Qihoo360/RePlugin/issues/676
+        plugin和host能在一个工程里面一起开发吗：https://github.com/Qihoo360/RePlugin/issues/43
+        如何解决插件和宿主都依赖某些公共库的 case？：https://github.com/Qihoo360/RePlugin/issues/182
+
+    ##、插件和宿主如何划分、如何划分插件。
+
+    ##、共同代码如何处理：如共同的第三方库、基础库等问题
+     1）请问插件和插件之间怎么通信呢？：https://github.com/Qihoo360/RePlugin/issues/575
+        借鉴DEMO中的WebView插件共享方式来实现
+
+     2）关于RePlugin的插件 与宿主 共享库问题 https://github.com/Qihoo360/RePlugin/issues/733
+
+
+## 如何打造一套公共的project 模版包括Base库、build.gradle 相同的配置，在插件化过程中，使各个插件配置相同 todo
